@@ -3,6 +3,6 @@ name: deploy
 
 steps:
 - name: hello-world
-  image: dronetest
+  image: drone/drone:2
   commands:
     - echo "hello world"
