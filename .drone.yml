@@ -5,4 +5,8 @@ steps:
 - name: hello-world
   image: drone/drone:2
   commands:
-    - echo "hello world"
+    - echo "hello world1"
+- name: hello-world
+  image: drone/drone:2
+  commands:
+    - echo "hello world2"
