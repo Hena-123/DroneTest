@@ -1,12 +1,18 @@
 kind: pipeline
-name: deploy
+name: default
 
 steps:
-- name: hello-world
-  image: drone/drone:2
-  commands:
-    - echo "hello world1"
-- name: hello-world
-  image: drone/drone:2
-  commands:
-    - echo "hello world2"
+  - name: write
+    image: alpine
+    commands:
+      - echo -n "this-is-a-test" > .tags
+      
+  - name: read
+    image: alpine
+    commands:
+      - echo -n "this-is-a-test" > .tags
+      
+  - name: update
+    image: alpine
+    commands:
+      - echo -n "this-is-a-test" > .tags
